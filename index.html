@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обращений студентов</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            display: flex;
+            min-height: 600px;
+        }
+        
+        .instructions {
+            flex: 1;
+            padding: 40px;
+            background: #f8f9fa;
+            border-right: 1px solid #eee;
+        }
+        
+        .instructions h2 {
+            color: #2575fc;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        
+        .step {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid #6a11cb;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #6a11cb;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .form-container {
+            flex: 2;
+            padding: 30px;
+        }
+        
+        .form-frame {
+            width: 100%;
+            height: 550px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .info-box {
+            background: #e8f4ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 25px;
+            border-left: 5px solid #2575fc;
+        }
+        
+        .info-box h3 {
+            color: #2575fc;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: #6a11cb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .instructions {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .form-frame {
+                height: 700px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-university"></i> Форма обращений студентов</h1>
+<p>Заполните форму ниже для обращения в деканат или учебный отдел</p>
+        </div>
+        
+        <div class="content">
+            <div class="instructions">
+                <h2><i class="fas fa-info-circle"></i> Как заполнять:</h2>
+                
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Укажите ваши данные</strong>
+                    <p>Введите ФИО, курс и факультет полностью</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Выберите срочность</strong>
+                    <p>Оцените насколько срочно нужно решить вопрос</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Опишите проблему</strong>
+                    <p>Подробно изложите суть обращения</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <strong>Нажмите "Отправить"</strong>
+                    <p>Ваше обращение будет зарегистрировано</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-shield-alt"></i> Важно знать:</h3>
+                    <p>• Все данные сохраняются автоматически</p>
+                    <p>• Ответим в течение 1-3 рабочих дней</p>
+                    <p>• При срочных вопросах звоните: 8-800-xxx-xx-xx</p>
+                </div>
+            </div>
+            
+            <div class="form-container">
+                <h2 style="color: #333; margin-bottom: 20px;"><i class="fas fa-edit"></i> Форма обращения:</h2>
+                
+                <!-- ВСТАВЬТЕ ВАШУ ССЫЛКУ НА ФОРМУ ЗДЕСЬ -->
+                <iframe 
+                    class="form-frame" 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfrPYvm4-dlPRgVcnO8Au__5RIUT8DxWIZSK07s_C3oOQ3hDg/viewform?embedded=true" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                    Загрузка формы...
+                </iframe>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-database"></i> Куда сохраняются данные?</h3>
+                    <p>Все обращения автоматически попадают в защищенную Google Таблицу. 
+                    Доступ к ним имеют только ответственные сотрудники деканата.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 Студенческий портал. Сайт работает на <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
+            <p style="margin-top: 5px; font-size: 0.8rem;">Техническая поддержка: support@university.edu</p>
+        </div>
+    </div>
+</body>
+</html>
